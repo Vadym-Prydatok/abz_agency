@@ -9,11 +9,10 @@ import { TopSection } from "./components/TopSection";
 import { SectionGetRequest } from "./components/SectionGetRequest";
 import { SectionPostRequest } from "./components/SectionPostRequest";
 import { BASE_URL } from "./api/URLs";
-import gsap from "gsap";
 
 function App() {
   const [response, setResponse] = useState<ResponseType | null>(null);
-  const [message, setMessage] = useState("New user successfully registered");
+  const [message, setMessage] = useState("");
   const [users, setUsers] = useState<UserType[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -55,21 +54,6 @@ function App() {
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, [message]);
-
-  React.useEffect(() => {
-    gsap.fromTo(
-      ".message",
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-      }
-    );
   }, [message]);
 
   return (

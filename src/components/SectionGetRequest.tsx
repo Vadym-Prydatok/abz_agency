@@ -4,7 +4,6 @@ import { UserCard } from "../modules/UserCard";
 import { Loader } from "./Loader";
 import { UserType } from "../types/UserType";
 import { ResponseType } from "../types/ResponeType";
-import gsap from "gsap";
 
 interface Props {
   isLoading: boolean;
@@ -20,24 +19,6 @@ export const SectionGetRequest: React.FC<Props> = ({
   handleGetUsers,
 }) => {
   
-  React.useEffect(() => {
-    gsap.fromTo(
-      "#users div div ul li",
-      {
-        opacity: 0,
-        y: -50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        stagger: 0.2,
-      }
-    );
-  }, [users]);
-
-
-
   return (
     <section id="users" className="py-[140px] bg-light_gray">
       <div className="container">

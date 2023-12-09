@@ -1,24 +1,8 @@
 import * as React from "react";
 import { Button } from "../modules/Button";
 import { scrollToAnchor } from "../utils/scrollToAnchor";
-import gsap from "gsap";
 
 export const TopSection = () => {
-  React.useEffect(() => {
-    gsap.fromTo(
-      "section div div div div",
-      {
-        opacity: 0,
-        y: -80,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.3,
-      },
-    );
-  }, []);
   return (
     <section>
       <div className="bg-[url('./assets/img/head.jpeg')] h-[500px] bg-cover bg-center lg:h-[650px]">

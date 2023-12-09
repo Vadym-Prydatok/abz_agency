@@ -2,24 +2,8 @@ import * as React from "react";
 import Logo from "../assets/icons/Logo.svg";
 import { Button } from "../modules/Button";
 import { scrollToAnchor } from "../utils/scrollToAnchor";
-import gsap from "gsap";
 
 export const Header = () => {
-  React.
-  useEffect(() => {
-    gsap.fromTo(
-      "header div nav",
-      {
-        opacity: 0,
-        y: -80,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-      },
-    );
-  }, []);
   return (
     <header>
       <div className="container">

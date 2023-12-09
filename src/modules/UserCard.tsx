@@ -4,7 +4,6 @@ import noPhoto from "../assets/img/photo-cover.svg";
 
 interface UserCardProps {
   user: UserType;
-
 }
 
 export const UserCard: React.FC<UserCardProps> = ({ user }) => {
